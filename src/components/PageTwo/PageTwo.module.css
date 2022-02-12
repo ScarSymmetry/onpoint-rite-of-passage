@@ -29,8 +29,6 @@
   left: 100px;
   justify-self: center;
   align-self: center;
-
-  border: 1px solid red;
 }
 
 .medium {
@@ -39,7 +37,38 @@
   grid-column: 4 / -1;
   grid-row: 1 / 4;
   align-self: center;
-  top:120px;
+  top: 120px;
   left: 30px;
-  border: 1px solid blue;
+}
+
+.medium2 {
+  position: absolute;
+  max-width: 550px;
+  grid-column: 4 / -1;
+  grid-row: 3 / 5;
+  justify-self: end;
+  align-self: center;
+  left: 60%;
+  bottom: 80px;
+}
+
+.weakling {
+  position: absolute;
+  grid-column: 4 / -1;
+  grid-row: 2 / 3;
+  max-width: 300px;
+  justify-self: end;
+  align-self: center;
+  right: 20px;
+  top: 40px;
+}
+
+.weakling2 {
+  position: absolute;
+  grid-column: 4 / -1;
+  grid-row: 4 / 5;
+  max-width: 250px;
+  justify-self: end;
+  right: -50px;
+  bottom: 80px;
 }

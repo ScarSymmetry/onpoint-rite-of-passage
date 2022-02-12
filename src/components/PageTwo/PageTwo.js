@@ -15,6 +15,21 @@ const PageTwo = () => {
         src={PAGE_TWO_IMAGES.medium}
         alt='mediocre_guy'
       />
+      <img
+        className={styles.weakling}
+        src={PAGE_TWO_IMAGES.weakling}
+        alt='justin_bieber'
+      />
+      <img
+        className={styles.medium2}
+        src={PAGE_TWO_IMAGES.medium2}
+        alt='mediocre_guy2'
+      />
+      <img
+        className={styles.weakling2}
+        src={PAGE_TWO_IMAGES.weakling2}
+        alt='taylor_swift'
+      />
     </div>
   );
 };
