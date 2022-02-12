@@ -9,9 +9,9 @@ function App() {
   return (
     <SlidesWrapper>
       {/* <PageOne /> */}
-      <PageTwo />
+      {/* <PageTwo /> */}
       {/* <PageThree /> */}
-      {/* <ScrollBox /> */}
+      <ScrollBox />
     </SlidesWrapper>
   );
 }
