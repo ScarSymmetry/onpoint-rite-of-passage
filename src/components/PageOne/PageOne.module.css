@@ -38,14 +38,6 @@
   font-weight: bold;
 }
 
-.cta {
-  grid-column: 4 / 5;
-  grid-row: 3 / 4;
-  align-self: end;
-  justify-self: center;
-  margin-bottom: 30px;
-}
-
 .floatingHuge {
   position: absolute;
   grid-column: 4 / 5;
@@ -77,4 +69,54 @@
   align-self: center;
   justify-self: center;
   top: 10px;
+}
+
+.staticLong {
+  position: absolute;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  right: 40%;
+  top: 20px;
+}
+
+.staticPinkBig {
+  position: absolute;
+  grid-column: 3 / -1;
+  grid-row: 2 / 4;
+  align-self: center;
+  top: 110px;
+  left: 80px;
+  transform: scale(0.9);
+  z-index: 5;
+}
+.staticPinkSmall {
+  position: absolute;
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
+  align-self: center;
+}
+
+.staticBlur {
+  position: absolute;
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+  justify-self: end;
+  right: -20px;
+}
+
+.staticSemi {
+  position: absolute;
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+  justify-self: center;
+  align-self: center;
+  max-width: 100px;
+}
+
+.cta {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+  align-self: end;
+  justify-self: center;
+  margin-bottom: 30px;
 }

@@ -37,6 +37,32 @@ const PageOne = () => {
         src={IMAGES.floatingSmall2}
         alt='bacteria'
       />
+      <img
+        className={styles.staticLong}
+        src={IMAGES.staticLong}
+        alt='nastyshyte'
+      />
+
+      <img
+        className={styles.staticPinkBig}
+        src={IMAGES.staticPinkBig}
+        alt='champion'
+      />
+      <img
+        className={styles.staticPinkSmall}
+        src={IMAGES.staticPinkSmall}
+        alt='weakling'
+      />
+      <img
+        className={styles.staticBlur}
+        src={IMAGES.staticBlur}
+        alt='bacteria'
+      />
+      <img
+        className={styles.staticSemi}
+        src={IMAGES.staticSemi}
+        alt='bacteria'
+      />
     </div>
   );
 };

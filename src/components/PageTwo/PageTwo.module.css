@@ -1,11 +1,45 @@
 .grid {
+  position: relative;
   height: 100vh;
   min-width: 1024px;
   display: grid;
   grid-template-columns: 6.8vw 1fr 1.5fr 2.2fr 4.45vw;
-  grid-template-rows: 50px 1fr 1fr 1fr 30px;
+  grid-template-rows: 50px 1fr 2fr 1fr 30px;
   background-image: url(/src/assets/backgrounds/bg2.png);
   background-size: cover;
   background-repeat: no-repeat;
   scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.message {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  align-self: end;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.champion {
+  position: absolute;
+  max-width: 800px;
+  grid-column: 3 / -1;
+  grid-row: 2 / 4;
+  left: 100px;
+  justify-self: center;
+  align-self: center;
+
+  border: 1px solid red;
+}
+
+.medium {
+  position: absolute;
+  max-width: 450px;
+  grid-column: 4 / -1;
+  grid-row: 1 / 4;
+  align-self: center;
+  top:120px;
+  left: 30px;
+  border: 1px solid blue;
 }
