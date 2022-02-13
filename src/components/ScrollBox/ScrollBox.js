@@ -22,7 +22,6 @@ const ScrollBox = () => {
         <input
           className={styles.range}
           type='range'
-          orient='vertical'
           min={0}
           max={100}
           value={range}

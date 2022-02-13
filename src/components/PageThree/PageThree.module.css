@@ -10,3 +10,44 @@
   scroll-snap-align: start;
   overflow: hidden;
 }
+
+.bottleAndBubbles {
+  max-width: 350px;
+  grid-column: 2 / 4;
+  grid-row: 2 / -1;
+  outline: 1px solid red;
+  align-self: end;
+}
+
+.bottleContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.bottle__img {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  z-index: 10;
+  align-self: end;
+  max-width: 220px;
+  height: auto;
+}
+
+.redSmall {
+  position: absolute;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  align-self: center;
+  max-width: 35px;
+  left: 30px;
+}
+.blueSmall {
+  position: absolute;
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+  max-width: 40px;
+}
+
+

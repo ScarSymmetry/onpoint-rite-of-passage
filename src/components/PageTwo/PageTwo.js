@@ -1,9 +1,13 @@
+import ScrollBox from '../ScrollBox/ScrollBox';
 import PAGE_TWO_IMAGES from '../../assets/images/pagetwo';
 import styles from './PageTwo.module.css';
 const PageTwo = () => {
   return (
     <div className={styles.grid}>
       <h3 className={styles.message}>Текст сообщения</h3>
+      <section className={styles.boxContainer}>
+        <ScrollBox />
+      </section>
 
       <img
         className={styles.champion}
