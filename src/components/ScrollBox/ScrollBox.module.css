@@ -1,7 +1,7 @@
 .grid {
   display: grid;
   grid-template-columns: minmax(50px, max-content) 1fr;
-  column-gap: 1em;
+  column-gap: 5px;
   max-width: 850px;
   padding: 1em;
   height: 450px;
@@ -13,7 +13,7 @@
   grid-row: 1 / -1;
   height: 100%;
   position: relative;
-  max-width: 50px;
+  max-width: 30px;
   border: 1px solid red;
   display: grid;
   grid-template-columns: 1fr;
@@ -52,8 +52,17 @@
 }
 
 .textWindow {
-  background-color: rgb(187, 119, 128);
+  background-color: hsl(var(--clr-white));
   overflow: auto;
   padding: 2em;
   border-radius: 40px;
+  touch-action: pan-x;
+  pointer-events: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+.textWindow::-webkit-scrollbar {
+  display: none;
 }

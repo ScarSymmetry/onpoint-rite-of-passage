@@ -1,3 +1,4 @@
+import CTAButton from '../CTAButton/CTAButton';
 import styles from './PageOne.module.css';
 import IMAGES from '../../assets/images/pageone';
 const PageOne = () => {
@@ -13,7 +14,7 @@ const PageOne = () => {
       </section>
 
       <div className={styles.cta}>
-        <button>Что дальше?</button>
+        <CTAButton buttonType='next'>Что дальше?</CTAButton>
       </div>
 
       <img

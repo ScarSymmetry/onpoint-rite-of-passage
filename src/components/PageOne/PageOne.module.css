@@ -1,14 +1,15 @@
 .grid {
   position: relative;
   height: 100vh;
-  min-width: 1024px;
+  width: 100vw;
   display: grid;
   grid-template-columns: 6.8vw 1fr 1.5fr 2.2fr 4.45vw;
-  grid-template-rows: 50px 1fr 1fr 1fr 30px;
+  grid-template-rows: 50px 1fr 2fr 1fr 30px;
   background-image: url(/src/assets/backgrounds/bg1.png);
   background-size: cover;
   background-repeat: no-repeat;
   scroll-snap-align: start;
+  overflow: hidden;
 }
 
 .greeting {
@@ -28,7 +29,7 @@
 }
 
 .textfield__paragraph {
-  font-size: 80px;
+  font-size: 90px;
 
   text-transform: uppercase;
   line-height: 1.1;
@@ -84,8 +85,8 @@
   grid-column: 3 / -1;
   grid-row: 2 / 4;
   align-self: center;
-  top: 110px;
-  left: 80px;
+  top: 70px;
+  left: 120px;
   transform: scale(0.9);
   z-index: 5;
 }
@@ -114,9 +115,10 @@
 }
 
 .cta {
+  position: absolute;
   grid-column: 4 / 5;
   grid-row: 3 / 4;
+  bottom: 60px;
   align-self: end;
   justify-self: center;
-  margin-bottom: 30px;
 }

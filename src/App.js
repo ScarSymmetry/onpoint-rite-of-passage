@@ -8,10 +8,10 @@ import './index.css';
 function App() {
   return (
     <SlidesWrapper>
-      {/* <PageOne /> */}
+      <PageOne />
       {/* <PageTwo /> */}
       {/* <PageThree /> */}
-      <ScrollBox />
+      {/* <ScrollBox /> */}
     </SlidesWrapper>
   );
 }
