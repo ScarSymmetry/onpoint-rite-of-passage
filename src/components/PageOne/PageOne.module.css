@@ -29,11 +29,11 @@
 }
 
 .textfield__paragraph {
-  font-size: 90px;
+  font-size: 95px;
 
   text-transform: uppercase;
   line-height: 1.1;
-  letter-spacing: 8px;
+  letter-spacing: 4px;
 }
 .textfield__paragraph span {
   font-weight: bold;
@@ -45,15 +45,18 @@
   grid-row: 4 / -1;
   top: 45%;
   max-width: 250px;
+  animation: scaling 5s ease-in-out infinite alternate;
 }
 .floatingBristle {
   position: absolute;
+  z-index: 10;
   grid-column: 4 / 5;
   grid-row: 2 / 3;
   max-width: 120px;
   justify-self: end;
   align-self: end;
   top: 150px;
+  animation: spin 30s linear infinite;
 }
 .floatingSmall {
   position: absolute;
@@ -61,6 +64,7 @@
   grid-row: 4 / 5;
   top: -40px;
   left: 30px;
+  animation: floatDiagonal 5s linear infinite alternate;
 }
 .floatingSmall2 {
   position: absolute;
@@ -70,6 +74,7 @@
   align-self: center;
   justify-self: center;
   top: 10px;
+  animation: floatOnX 7s ease-in-out infinite alternate;
 }
 
 .staticLong {
@@ -118,7 +123,48 @@
   position: absolute;
   grid-column: 4 / 5;
   grid-row: 3 / 4;
-  bottom: 60px;
+  bottom: 45px;
   align-self: end;
   justify-self: center;
+  z-index: 10;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes floatDiagonal {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  0% {
+    transform: translate(20px, 30px);
+  }
+}
+
+@keyframes scaling {
+  from {
+    transform: scale(1) translate(-10px, -10px);
+  }
+  to {
+    transform: scale(1.2) translate(10px, 10px);
+  }
+}
+@keyframes floatOnX {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  0% {
+    transform: translateX(0px);
+  }
 }
