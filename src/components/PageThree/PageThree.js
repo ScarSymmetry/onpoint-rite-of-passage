@@ -20,6 +20,36 @@ const PageThree = () => {
             src={THIRD_PAGE_IMGS.blueSmall}
             alt='bubble'
           />
+          <img
+            className={styles.blueBig}
+            src={THIRD_PAGE_IMGS.blueBig}
+            alt='bubble'
+          />
+          <img
+            className={styles.pinkBig}
+            src={THIRD_PAGE_IMGS.pinkBig}
+            alt='bubble'
+          />
+          <img
+            className={styles.tinyBlue}
+            src={THIRD_PAGE_IMGS.tinyBlue}
+            alt='bubble'
+          />
+          <img
+            className={styles.darkerBlueBig}
+            src={THIRD_PAGE_IMGS.darkerBlueBig}
+            alt='bubble'
+          />
+          <img
+            className={styles.pinkBigGlare}
+            src={THIRD_PAGE_IMGS.pinkBigGlare}
+            alt='bubble'
+          />
+          <img
+            className={styles.blueBlurred}
+            src={THIRD_PAGE_IMGS.blueBlurred}
+            alt='bubble'
+          />
         </div>
       </div>
     </div>
