@@ -1,6 +1,6 @@
 .grid {
   height: 100vh;
-  width: 100vw;
+  min-width: 100vw;
   display: grid;
   grid-template-columns: 6.8vw 1fr 2fr 1fr 4.45vw;
   grid-template-rows: 50px 1.5fr 1fr 1fr 30px;
