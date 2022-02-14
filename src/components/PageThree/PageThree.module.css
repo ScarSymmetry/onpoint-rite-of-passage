@@ -2,8 +2,8 @@
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: 6.8vw 1fr 1.5fr 2.2fr 4.45vw;
-  grid-template-rows: 50px 1fr 1fr 1fr 30px;
+  grid-template-columns: 6.8vw 1fr 2fr 1fr 4.45vw;
+  grid-template-rows: 50px 1.5fr 1fr 1fr 30px;
   background-image: url(/src/assets/backgrounds/bg3.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,6 +11,69 @@
   overflow: hidden;
 }
 
+.keyMessage {
+  grid-column: 3 / 5;
+  grid-row: 2 / 3;
+  justify-self: start;
+  align-self: end;
+  margin-bottom: 32px;
+}
+.heading {
+  font-size: 1.5em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.brand {
+  font-size: 6em;
+  font-weight: 400;
+  letter-spacing: 4px;
+  line-height: 1;
+  margin-top: 16px;
+}
+.brand span {
+  font-weight: bold;
+}
+
+/* middle details section */
+
+.details {
+  grid-column: 2 / 5;
+  grid-row: 3 / 5;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: 1fr;
+  gap: 40px;
+
+  height: max-content;
+  margin-left: 150px;
+  justify-self: center;
+  outline: 1px solid blue;
+}
+.noteTable {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  width: 400px;
+  height: 265px;
+  border-radius: 40px;
+  background-color: rgb(236, 213, 213);
+}
+.noteCalendar {
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+
+  height: 150px;
+  border-radius: 40px;
+  background-color: rgb(236, 207, 207);
+}
+
+.ctaArea {
+  grid-column: 2 / -1;
+  grid-row: 1 / -1;
+  align-self: end;
+}
+
+/* bottle and bubbles floating stuff */
 .bottleAndBubbles {
   max-width: 350px;
   grid-column: 2 / 4;

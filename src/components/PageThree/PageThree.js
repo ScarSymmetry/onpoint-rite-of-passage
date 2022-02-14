@@ -1,9 +1,25 @@
 import THIRD_PAGE_IMGS from '../../assets/images/pagethree';
+import CTAButton from '../CTAButton/CTAButton';
 import styles from './PageThree.module.css';
 const PageThree = () => {
   return (
     <div className={styles.grid}>
-      <div className={styles.bottleAndBubbles}>
+      <section className={styles.keyMessage}>
+        <h4 className={styles.heading}>Ключевое сообщение</h4>
+        <h2 className={styles.brand}>
+          BRAND <span>XY</span>
+        </h2>
+      </section>
+
+      <section className={styles.details}>
+        <div className={styles.noteTable}></div>
+        <div className={styles.noteCalendar}></div>
+        <div className={styles.ctaArea}>
+          <CTAButton>Подробнее</CTAButton>
+        </div>
+      </section>
+
+      <section className={styles.bottleAndBubbles}>
         <div className={styles.bottleContainer}>
           <img
             className={styles.bottle__img}
@@ -51,7 +67,7 @@ const PageThree = () => {
             alt='bubble'
           />
         </div>
-      </div>
+      </section>
     </div>
   );
 };
