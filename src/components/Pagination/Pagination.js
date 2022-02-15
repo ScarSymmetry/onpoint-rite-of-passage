@@ -20,7 +20,7 @@ const Pagination = () => {
 
   const bulletAmount = data.length / itemsPerPage;
 
-  const mappedBullets = Array.from({ length: bulletAmount }).map((_, i) => i);
+  const mappedBullets = Array.from({ length: bulletAmount }).map((_, i) => i); //Dynamically changed bullet amount
 
   return (
     <section className={styles.container}>

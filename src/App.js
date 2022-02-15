@@ -7,16 +7,16 @@ import SlidesWrapper from './components/SlidesWrapper/SlidesWrapper';
 
 import './index.css';
 function App() {
-  const isOpen = true;
+  const isOpen = false;
   return (
     <>
-      {/* <SlidesWrapper> */}
-      {/* <PageOne />
-        <PageTwo /> */}
-      {/* <PageThree />
+      <SlidesWrapper>
+        <PageOne />
+        <PageTwo />
+        <PageThree />
       </SlidesWrapper>
-      <Modal modalOpen={isOpen} /> */}
-      <Pagination />
+      <Modal modalOpen={isOpen} />
+      {/* <Pagination /> */}
     </>
   );
 }
