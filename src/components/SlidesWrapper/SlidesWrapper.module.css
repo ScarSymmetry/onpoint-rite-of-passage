@@ -1,14 +1,15 @@
 .container {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-}
-
-.slider {
+  display: flex;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: hidden;
+}
+
+.slider {
   display: flex;
+  transition: transform 550ms ease-out;
 }

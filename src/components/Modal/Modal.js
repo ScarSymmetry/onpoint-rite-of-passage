@@ -1,11 +1,21 @@
 import Portal from '../Portal/Portal';
 import styles from './Modal.module.css';
-import { useState } from 'react';
 
 const Modal = ({ modalOpen }) => {
   return (
     <Portal isOpen={modalOpen}>
-      <div style={{ color: 'white' }}>HELLO LOL CUNTS</div>
+      <div className={styles.popupBody}>
+        <div className={styles.topArea}>
+          <h5> преимущества</h5>
+          <button>X</button>
+        </div>
+
+        <div className={styles.brand}>
+          <h2>
+            BRAND <span>XY</span>
+          </h2>
+        </div>
+      </div>
     </Portal>
   );
 };

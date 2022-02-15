@@ -1,9 +1,11 @@
 .modalWrapper {
   position: fixed;
+  display: grid;
+  place-items: center;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 100;
-  background-color: hsla(197, 100%, 4%, 0.55);
+  background-color: #5b6778d5;
 }
