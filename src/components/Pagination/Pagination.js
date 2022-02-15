@@ -12,15 +12,17 @@ const data = [
 
 const Pagination = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(3);
+  const itemsPerPage = 3;
 
   const lastItemIndex = currentPage * itemsPerPage;
   const firstItemIndex = lastItemIndex - itemsPerPage;
   const currentItems = data.slice(firstItemIndex, lastItemIndex);
 
-  const bulletAmount = data.length / itemsPerPage;
+  const bulletAmount = Math.ceil(data.length / itemsPerPage);
 
-  const mappedBullets = Array.from({ length: bulletAmount }).map((_, i) => i); //Dynamically changed bullet amount
+  const mappedBullets = Array.from({ length: bulletAmount }).map(
+    (_, index) => index
+  ); //Dynamically changed bullet amount
 
   return (
     <section className={styles.container}>

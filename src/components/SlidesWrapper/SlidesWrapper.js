@@ -1,6 +1,9 @@
+import PageOne from '../PageOne/PageOne';
+import PageTwo from '../PageTwo/PageTwo';
+import PageThree from '../PageThree/PageThree';
 import { useRef, useState, useEffect } from 'react';
 import styles from './SlidesWrapper.module.css';
-const SlidesWrapper = ({ children }) => {
+const SlidesWrapper = ({ openModal }) => {
   const sliderRef = useRef(null);
   const containerRef = useRef(null);
   const [offset, setOffset] = useState(0);
@@ -20,7 +23,6 @@ const SlidesWrapper = ({ children }) => {
     const firstTouchY = e.changedTouches[0].clientY;
     setStartX(firstTouchX);
     setStartY(firstTouchY);
-    console.log(firstTouchX, firstTouchY);
   };
   const handleTouchEnd = (e) => {
     const lastTouchX = e.changedTouches[0].clientX;
@@ -56,7 +58,9 @@ const SlidesWrapper = ({ children }) => {
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        {children}
+        <PageOne />
+        <PageTwo />
+        <PageThree openModal={openModal} />
       </div>
     </div>
   );
