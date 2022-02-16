@@ -1,3 +1,15 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: rgba(86, 104, 104, 0.74);
+}
+
 .popupBody {
   width: 825px;
   height: 575px;

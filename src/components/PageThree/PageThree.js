@@ -1,7 +1,8 @@
+import Modal from '../Modal/Modal';
 import THIRD_PAGE_IMGS from '../../assets/images/pagethree';
 import CTAButton from '../CTAButton/CTAButton';
 import styles from './PageThree.module.css';
-const PageThree = ({openModal}) => {
+const PageThree = ({ openModal, closeModal ,isModalOpen}) => {
   return (
     <div className={styles.grid}>
       <section className={styles.keyMessage}>
@@ -15,7 +16,7 @@ const PageThree = ({openModal}) => {
         <div className={styles.noteTable}></div>
         <div className={styles.noteCalendar}></div>
         <div className={styles.ctaArea}>
-          <CTAButton onClick={openModal}>Подробнее</CTAButton>
+          <CTAButton onClick={() => openModal(true)}>Подробнее</CTAButton>
         </div>
       </section>
 
@@ -68,6 +69,8 @@ const PageThree = ({openModal}) => {
           />
         </div>
       </section>
+
+      <Modal modalOpen={isModalOpen} closeModal={closeModal} />
     </div>
   );
 };

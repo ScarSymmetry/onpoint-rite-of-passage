@@ -3,7 +3,7 @@ import PageTwo from '../PageTwo/PageTwo';
 import PageThree from '../PageThree/PageThree';
 import { useRef, useState, useEffect } from 'react';
 import styles from './SlidesWrapper.module.css';
-const SlidesWrapper = ({ openModal }) => {
+const SlidesWrapper = ({ openModal, closeModal, isModalOpen }) => {
   const sliderRef = useRef(null);
   const containerRef = useRef(null);
   const [offset, setOffset] = useState(0);
@@ -60,7 +60,11 @@ const SlidesWrapper = ({ openModal }) => {
       >
         <PageOne />
         <PageTwo />
-        <PageThree openModal={openModal} />
+        <PageThree
+          openModal={openModal}
+          closeModal={closeModal}
+          isModalOpen={isModalOpen}
+        />
       </div>
     </div>
   );

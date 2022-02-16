@@ -1,6 +1,7 @@
 .grid {
   height: 100%;
   min-width: 100vw;
+  position: relative;
   display: grid;
   grid-template-columns: 6.8vw 1fr 2fr 1fr 4.45vw;
   grid-template-rows: 50px 1.5fr 1fr 1fr 30px;
@@ -75,9 +76,10 @@
 
 /* bottle and bubbles floating stuff */
 .bottleAndBubbles {
-  max-width: 350px;
   grid-column: 2 / 4;
   grid-row: 2 / -1;
+  z-index: 1000;
+  max-width: 350px;
   outline: 1px solid red;
   align-self: end;
 }

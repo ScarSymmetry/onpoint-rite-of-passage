@@ -1,13 +1,13 @@
-import Portal from '../Portal/Portal';
 import styles from './Modal.module.css';
 
-const Modal = ({ modalOpen }) => {
+const Modal = ({ modalOpen, closeModal }) => {
+  if (!modalOpen) return null;
   return (
-    <Portal isOpen={modalOpen}>
+    <section className={styles.overlay}>
       <div className={styles.popupBody}>
         <div className={styles.topArea}>
           <h5> преимущества</h5>
-          <button>X</button>
+          <button onClick={() => closeModal(false)}>X</button>
         </div>
 
         <div className={styles.brand}>
@@ -16,7 +16,7 @@ const Modal = ({ modalOpen }) => {
           </h2>
         </div>
       </div>
-    </Portal>
+    </section>
   );
 };
 

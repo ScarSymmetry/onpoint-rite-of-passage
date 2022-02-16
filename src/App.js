@@ -9,8 +9,12 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <>
-      <SlidesWrapper openModal={() => setModalOpen(true)} />
-      <Modal modalOpen={modalOpen} />
+      <SlidesWrapper
+        openModal={setModalOpen}
+        closeModal={setModalOpen}
+        isModalOpen={modalOpen}
+      />
+
       {/* <Pagination /> */}
     </>
   );
