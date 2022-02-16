@@ -3,22 +3,15 @@ import PageTwo from '../PageTwo/PageTwo';
 import PageThree from '../PageThree/PageThree';
 import { useRef, useState, useEffect } from 'react';
 import styles from './SlidesWrapper.module.css';
-const SlidesWrapper = ({ openModal, closeModal, isModalOpen }) => {
+
+const SlidesWrapper = ({ openModal }) => {
   const sliderRef = useRef(null);
   const containerRef = useRef(null);
   const [offset, setOffset] = useState(0);
   const [startX, setStartX] = useState(0);
   const [startY, setStartY] = useState(0);
-  const [slidesWidth, setSlidesWidth] = useState(null);
 
   const TOUCH_THRESHOLD = 32;
-
-  useEffect(() => {
-    //getting the width of slides
-    const containerWidth =
-      containerRef.current.scrollWidth - containerRef.current.offsetWidth;
-    setSlidesWidth(containerWidth);
-  }, []);
 
   const handleTouchStart = (e) => {
     const firstTouchX = e.changedTouches[0].clientX;
@@ -41,7 +34,7 @@ const SlidesWrapper = ({ openModal, closeModal, isModalOpen }) => {
   const onSwipeLeft = () => {
     setOffset((currentOffset) => {
       const newOffset = currentOffset - 1024;
-      const maxOffset = -slidesWidth;
+      const maxOffset = -2024;
       return Math.max(newOffset, maxOffset);
     });
   };
@@ -64,11 +57,7 @@ const SlidesWrapper = ({ openModal, closeModal, isModalOpen }) => {
       >
         <PageOne />
         <PageTwo />
-        <PageThree
-          openModal={openModal}
-          closeModal={closeModal}
-          isModalOpen={isModalOpen}
-        />
+        <PageThree openModal={openModal} />
       </div>
     </div>
   );

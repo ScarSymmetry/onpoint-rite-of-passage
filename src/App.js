@@ -8,12 +8,8 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <>
-      <SlidesWrapper
-        openModal={setModalOpen}
-        closeModal={setModalOpen}
-        isModalOpen={modalOpen}
-      />
-      <Modal modalOpen={false} />
+      <SlidesWrapper openModal={setModalOpen} />
+      <Modal modalOpen={modalOpen} closeModal={setModalOpen} />
     </>
   );
 }
