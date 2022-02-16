@@ -1,3 +1,5 @@
+import SprayBottle from '../SprayBottle/SprayBottle';
+import PaginationDisplay from '../Pagination/PaginationDisplay';
 import styles from './Modal.module.css';
 
 const Modal = ({ modalOpen, closeModal }) => {
@@ -15,7 +17,12 @@ const Modal = ({ modalOpen, closeModal }) => {
             BRAND <span>XY</span>
           </h2>
         </div>
-        <section className={styles.paginationContainer}></section>
+        <section className={styles.paginationContainer}>
+          <PaginationDisplay />
+        </section>
+      </div>
+      <div className={styles.bottleContainer}>
+        <SprayBottle />
       </div>
     </section>
   );
