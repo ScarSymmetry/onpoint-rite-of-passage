@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: 6.8vw 1fr 1.5fr 2.2fr 4.45vw;
   grid-template-rows: 50px 0.5fr 2fr 70px 30px;
-  background-image: url(/src/assets/backgrounds/bg2.png);
+  background-image: url(/src/assets/backgrounds/bg2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   scroll-snap-align: start;

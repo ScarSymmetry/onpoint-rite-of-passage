@@ -1,12 +1,10 @@
 import PageOne from '../PageOne/PageOne';
 import PageTwo from '../PageTwo/PageTwo';
 import PageThree from '../PageThree/PageThree';
-import { useRef, useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from './SlidesWrapper.module.css';
 
 const SlidesWrapper = ({ openModal }) => {
-  const sliderRef = useRef(null);
-  const containerRef = useRef(null);
   const [offset, setOffset] = useState(0);
   const [startX, setStartX] = useState(0);
   const [startY, setStartY] = useState(0);
@@ -34,7 +32,7 @@ const SlidesWrapper = ({ openModal }) => {
   const onSwipeLeft = () => {
     setOffset((currentOffset) => {
       const newOffset = currentOffset - 1024;
-      const maxOffset = -2024;
+      const maxOffset = -2048;
       return Math.max(newOffset, maxOffset);
     });
   };
@@ -47,9 +45,8 @@ const SlidesWrapper = ({ openModal }) => {
   };
 
   return (
-    <div ref={containerRef} className={styles.container}>
+    <div className={styles.container}>
       <div
-        ref={sliderRef}
         style={{ transform: `translateX(${offset}px)` }}
         className={styles.slider}
         onTouchStart={handleTouchStart}

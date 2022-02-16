@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: 6.8vw 1fr 2fr 1fr 4.45vw;
   grid-template-rows: 50px 1.5fr 1fr 1fr 30px;
-  background-image: url(/src/assets/backgrounds/bg3.png);
+  background-image: url(/src/assets/backgrounds/bg3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   scroll-snap-align: start;
@@ -49,23 +49,66 @@
   height: max-content;
   margin-left: 70px;
   justify-self: center;
-  outline: 1px solid blue;
 }
 .noteTable {
+  position: relative;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  display: grid;
+  place-items: center;
   width: 400px;
   height: 265px;
   border-radius: 40px;
-  background-color: rgb(236, 213, 213);
+  background-color: #f3f2fd;
+  padding: 60px;
 }
+
+.noteTable::before {
+  position: absolute;
+  align-self: start;
+  margin-top: -35px;
+  left: 110px;
+  content: '';
+  width: 70px;
+  height: 70px;
+  background-image: url(/src/assets/images/pagethree/table.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.noteTable p {
+  margin-left: 50px;
+  font-size: 1.3rem;
+}
+
 .noteCalendar {
+  position: relative;
   grid-column: 2 / -1;
   grid-row: 1 / 2;
-
+  display: grid;
+  place-items: center;
+  padding: 40px;
   height: 150px;
   border-radius: 40px;
-  background-color: rgb(236, 207, 207);
+  background-color: #f3f2fd;
+}
+.noteCalendar::before {
+  position: absolute;
+  align-self: start;
+  justify-self: start;
+  left: 40px;
+  margin-top: -35px;
+
+  content: '';
+  width: 70px;
+  height: 70px;
+  background-image: url(/src/assets/images/pagethree/calendar.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.noteCalendar p {
+  font-size: 1.3rem;
 }
 
 .ctaArea {

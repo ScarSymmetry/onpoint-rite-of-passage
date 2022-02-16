@@ -12,8 +12,15 @@ const PageThree = ({ openModal }) => {
       </section>
 
       <section className={styles.details}>
-        <div className={styles.noteTable}></div>
-        <div className={styles.noteCalendar}></div>
+        <div className={styles.noteTable}>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+            nostrum.
+          </p>
+        </div>
+        <div className={styles.noteCalendar}>
+          <p>Lorem, ipsum dolor sit amet consectetur</p>
+        </div>
         <div className={styles.ctaArea}>
           <CTAButton onClick={() => openModal(true)}>Подробнее</CTAButton>
         </div>
