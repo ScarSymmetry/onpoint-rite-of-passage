@@ -1,21 +1,20 @@
-import Modal from './components/Modal/Modal';
-
-import Pagination from './components/Pagination/Pagination';
 import SlidesWrapper from './components/SlidesWrapper/SlidesWrapper';
+import PaginationDisplay from './components/Pagination/PaginationDisplay';
 import { useState } from 'react';
 
 import './index.css';
+
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <>
-      <SlidesWrapper
+      {/* <SlidesWrapper
         openModal={setModalOpen}
         closeModal={setModalOpen}
         isModalOpen={modalOpen}
-      />
+      /> */}
 
-      {/* <Pagination /> */}
+      <PaginationDisplay />
     </>
   );
 }

@@ -1,26 +1,9 @@
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr minmax(40px, max-content);
-  width: 500px;
-  height: 350px;
-  border: 1px solid red;
-  padding-inline: 0px 10px;
-  padding-block: 10px 10px;
-}
-
-.display {
-  width: 100%;
-  height: 100%;
-}
-
 .controls {
   justify-self: start;
   min-width: 90px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  outline: 1px solid green;
 }
 
 .bulletBox {
@@ -37,6 +20,14 @@
   border-radius: 50%;
 }
 
+.activeBullet {
+  width: 10px;
+  height: 10px;
+  margin-inline: 5px;
+  border: none;
+  border-radius: 50%;
+  background-color: #fc6da9;
+}
 .directionButton {
   display: flex;
   justify-content: center;

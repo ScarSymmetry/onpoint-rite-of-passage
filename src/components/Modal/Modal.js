@@ -15,6 +15,7 @@ const Modal = ({ modalOpen, closeModal }) => {
             BRAND <span>XY</span>
           </h2>
         </div>
+        <section className={styles.paginationContainer}></section>
       </div>
     </section>
   );

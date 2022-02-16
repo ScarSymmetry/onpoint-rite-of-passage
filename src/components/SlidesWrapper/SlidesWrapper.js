@@ -11,6 +11,8 @@ const SlidesWrapper = ({ openModal, closeModal, isModalOpen }) => {
   const [startY, setStartY] = useState(0);
   const [slidesWidth, setSlidesWidth] = useState(null);
 
+  const TOUCH_THRESHOLD = 32;
+
   useEffect(() => {
     //getting the width of slides
     const containerWidth =
@@ -30,8 +32,10 @@ const SlidesWrapper = ({ openModal, closeModal, isModalOpen }) => {
     let deltaX = lastTouchX - startX;
     let deltaY = lastTouchY - startY;
 
-    if (Math.abs(deltaX) > Math.abs(deltaY) && deltaX > 32) onSwipeRight();
-    if (Math.abs(deltaX) > Math.abs(deltaY) && deltaX < -32) onSwipeLeft();
+    if (Math.abs(deltaX) > Math.abs(deltaY) && deltaX > TOUCH_THRESHOLD)
+      onSwipeRight();
+    if (Math.abs(deltaX) > Math.abs(deltaY) && deltaX < -TOUCH_THRESHOLD)
+      onSwipeLeft();
   };
 
   const onSwipeLeft = () => {

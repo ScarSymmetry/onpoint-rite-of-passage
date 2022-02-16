@@ -1,0 +1,36 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr minmax(40px, max-content);
+  width: 400px;
+  height: 350px;
+  outline: 1px solid red;
+  padding-inline: 0px 10px;
+  padding-block: 10px 10px;
+}
+
+.display {
+  width: 100%;
+  height: 100%;
+}
+
+.product {
+  margin-block: 15px;
+  height: 80px;
+  animation: fadeIn 550ms ease-out;
+}
+.product h3 {
+  margin-bottom: 20px;
+  color: #8cc9e8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
