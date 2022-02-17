@@ -1,7 +1,7 @@
 import CTAButton from '../CTAButton/CTAButton';
 import styles from './PageOne.module.css';
 import IMAGES from '../../assets/images/pageone';
-const PageOne = () => {
+const PageOne = ({ toSecondPage }) => {
   return (
     <div className={styles.grid}>
       <h3 className={styles.greeting}>привет,</h3>
@@ -14,7 +14,9 @@ const PageOne = () => {
       </section>
 
       <div className={styles.cta}>
-        <CTAButton buttonType='next'>Что дальше?</CTAButton>
+        <CTAButton onClick={toSecondPage} buttonType='next'>
+          Что дальше?
+        </CTAButton>
       </div>
 
       <img
