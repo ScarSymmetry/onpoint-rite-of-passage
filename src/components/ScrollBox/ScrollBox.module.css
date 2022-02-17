@@ -51,11 +51,13 @@
 }
 
 .textWindow {
+  position: relative;
   background-color: hsl(var(--clr-white));
   overflow: auto;
   padding: 2em;
   border-radius: 40px;
   touch-action: pan-x;
+  border-block: 10px solid white;
   pointer-events: none;
   -ms-overflow-style: none;
   scrollbar-width: none;

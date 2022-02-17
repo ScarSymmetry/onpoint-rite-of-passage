@@ -31,16 +31,26 @@
   justify-content: space-between;
 }
 
-.topArea button {
-  width: 40px;
-  height: 40px;
-}
 .topArea h5 {
   align-self: end;
   font-size: 1.5em;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+.close {
+  width: 40px;
+  height: 40px;
+  padding: 1px;
+  background-color: transparent;
+  border: none;
+}
+.close img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
 }
 
 .brand {

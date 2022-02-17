@@ -1,6 +1,7 @@
 import SprayBottle from '../SprayBottle/SprayBottle';
 import PaginationDisplay from '../Pagination/PaginationDisplay';
 import styles from './Modal.module.css';
+import close from '../../assets/icons/close.png';
 
 const Modal = ({ modalOpen, closeModal }) => {
   if (!modalOpen) return null;
@@ -9,7 +10,9 @@ const Modal = ({ modalOpen, closeModal }) => {
       <div className={styles.popupBody}>
         <div className={styles.topArea}>
           <h5> преимущества</h5>
-          <button onClick={() => closeModal(false)}>X</button>
+          <button className={styles.close} onClick={() => closeModal(false)}>
+            <img src={close} alt='close' />
+          </button>
         </div>
 
         <div className={styles.brand}>
