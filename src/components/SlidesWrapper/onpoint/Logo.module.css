@@ -1,0 +1,7 @@
+.logoWrapper {
+  position: fixed;
+  z-index: 300;
+  left: 70px;
+  bottom: 30px;
+  max-width: 70px;
+}

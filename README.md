@@ -17,6 +17,8 @@ In the project directory, you can run:
 1. Динамическая пагинация на 3 странице в модальном окне
 2. Свайпы по контейнеру по Х-оси с touchEvents
 3. Нажатие на первую CTA-кнопку ведет на вторую страницу, домик ведет в ~~деревню~~ на первую страницу :)
+### Что использовал:
+чистый ReactJS и хуки, css-modules.Постарался оптимизировать вес PNG-картинок из PSD макета.
 
 ### Use strictly in Chromes landscape Ipad 1024/768 mode.Otherwise it breaks and looks like a shyte
 

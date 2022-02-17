@@ -3,6 +3,8 @@ import PageTwo from '../PageTwo/PageTwo';
 import PageThree from '../PageThree/PageThree';
 import { useState } from 'react';
 import styles from './SlidesWrapper.module.css';
+import Home from './onpoint/Home';
+import { Logo } from './onpoint/Logo';
 
 const SlidesWrapper = ({ openModal }) => {
   const [offset, setOffset] = useState(0);
@@ -47,6 +49,8 @@ const SlidesWrapper = ({ openModal }) => {
 
   return (
     <div className={styles.container}>
+      <Home goHome={() => setOffset(0)} />
+      <Logo />
       <div
         style={{ transform: `translateX(${offset}px)` }}
         className={styles.slider}
